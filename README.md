@@ -9,6 +9,8 @@ Test bench for testing python applications for penetration
 
 #### Install
 
+You need python > 3.6 and pip
+
 ```sh
 $ git clone https://github.com/DanteOnline/hack-the-python.git
 $ cd hack-the-python
@@ -17,9 +19,18 @@ $ pip install -r requirements.txt
 
 #### Run
 
+If you user python command run runall.py
+
 ```sh
 $ python runall.py
 ```
+
+If you user python3 command run runall3.py
+
+```sh
+$ python3 runall3.py
+```
+
 Go to main menu on [http://127.0.0.1:8000](http://127.0.0.1:8000)
 # List of vulnerabilities
 

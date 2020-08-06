@@ -9,7 +9,8 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
 def memu_view(request):
-    return render(request, 'blogapp/menu.html', {'hostport': 'http://127.0.0.1:800'})
+    hostport = request.META['HTTP_HOST']
+    return render(request, 'blogapp/menu.html', {'hostport': f'http://{hostport[:-1]}'})
 
 
 # Create your views here.

@@ -9,7 +9,7 @@ def run_flask_process(process):
 
 def run_django_process(process):
     print(f'RUN {process}')
-    os.system(f'python {process} runserver')
+    os.system(f'python {process} runserver 0.0.0.0:8000')
 
 
 def run_process(process):
