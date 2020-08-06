@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    Posts count: {{posts|length}}
+    <div class="col-lg-8 col-md-10 mx-auto">
+        {% for item in posts %}
+        <div class="post-preview">
+            <a href="{% url 'blog:post' id=item.id %}">
+                <h2 class="post-title">
+                    {{ item.name }}
+                </h2>
+                <h3 class="post-subtitle">
+                    Read
+                </h3>
+            </a>
+            <p class="post-meta">Posted by
+                <a href="#">{{item.user}}</a>
+                on September {{item.create}}
+            </p>
+        </div>
+        <hr>
+        {% endfor %}
+        <!-- Pager -->
+
+        <div class="clearfix">
+            <div class="pagination">
+
+            <span class="step-links">
+                {% if posts.has_previous %}
+                    <a href="?page={{ posts.previous_page_number }}">previous</a>
+                {% endif %}
+
+                <span class="current">
+                    Page {{ posts.number }} of {{ posts.paginator.num_pages }}.
+                </span>
+
+                {% if posts.has_next %}
+              <a href="?page={{ posts.next_page_number }}">next</a>
+
+
+
+
+                {% endif %}
+
+
+            </span>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

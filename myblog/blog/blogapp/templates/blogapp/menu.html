@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hack the python</title>
+    <link href="{% static 'css/menu.css' %}" rel="stylesheet">
+</head>
+<body class="noisy"></body>
+<div class="emblem"><span class="icon-information"></span></div>
+<div class="frame">
+    <div class="piece output">
+        <h1>Hack the python</h1>
+        <h2>Menu</h2>
+        <ul>
+            <li>
+                <h3>Web-client</h3>
+                <ul>
+                    <li>
+                        <a href="{{hostport}}1" target="_blank">SQL injection</a>
+                    </li>
+                    <li>
+                        <a href="{{hostport}}0/index/" target="_blank">xss</a>
+                    </li>
+                    <li>
+                        <a href="{{hostport}}0/index/" target="_blank">csrf</a>
+                    </li>
+                    <li>
+                        <a href="{{hostport}}2" target="_blank">other</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h3>Web-server</h3>
+                <ul>
+                    <li>
+                        <a href="{{hostport}}3" target="_blank">eval injection</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h3>Other</h3>
+                <ul>
+                    <a href="{% static 'sockserver.zip' %}" download>pickle injection (download example)</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h3>Tools</h3>
+                <ul>
+                    <li>
+                        <a href="{{hostport}}4" target="_blank">server to intercept cookies</a>
+                    </li>
+                    <li>
+                        <a href="{{hostport}}5" target="_blank">csrf server</a>
+                    </li>
+                    <li>
+                        <a href="{{hostport}}5/send/" target="_blank">csrf server (automatic request sending)</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="piece scanlines noclick"></div>
+    <div class="piece glow noclick"></div>
+</div>

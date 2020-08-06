@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+Создание поста
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+        <form method="post" enctype="multipart/form-data">
+            {% for field in form %}
+            <p>{{field.label_tag}}</p>
+            <hr>
+            {% for error in field.errors %}
+            {{error}}
+            {% endfor %}
+            <p>{{field}}</p>
+            {% endfor %}
+            <button type="submit" class="btn btn-primary">Сохранить</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
