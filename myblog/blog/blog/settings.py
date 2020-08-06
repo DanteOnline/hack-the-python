@@ -131,8 +131,8 @@ AUTH_USER_MODEL = 'usersapp.BlogUser'
 
 # Переходы
 # Куда идти после логина
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/index/'
 # Куда идти после выхода
-LOGOUT_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/index/'
 # Куда идти на логин
 LOGIN_URL = '/users/login/'
