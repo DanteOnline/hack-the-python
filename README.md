@@ -9,7 +9,7 @@ Test bench for testing python applications for penetration
 
 #### Install
 
-You need python > 3.6 and pip
+You need python >= 3.6 and pip
 
 ```sh
 $ git clone https://github.com/DanteOnline/hack-the-python.git
@@ -19,13 +19,13 @@ $ pip install -r requirements.txt
 
 #### Run
 
-If you user python command run runall.py
+If you use python command run runall.py
 
 ```sh
 $ python runall.py
 ```
 
-If you user python3 command run runall3.py
+If you use python3 command run runall3.py
 
 ```sh
 $ python3 runall3.py
