@@ -2,6 +2,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, HttpResponseRedirect
 from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
+from django.conf import settings
 
 from .models import Post
 from .forms import PostForm
@@ -10,7 +11,8 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 def memu_view(request):
     hostport = request.META['HTTP_HOST']
-    return render(request, 'blogapp/menu.html', {'hostport': f'http://{hostport[:-1]}'})
+    template_name = 'blogapp/menu.html' if settings.SHOW_VULNS else 'blogapp/menu_no.html'
+    return render(request, template_name, {'hostport': f'http://{hostport[:-1]}'})
 
 
 # Create your views here.

@@ -136,3 +136,5 @@ LOGIN_REDIRECT_URL = '/index/'
 LOGOUT_REDIRECT_URL = '/index/'
 # Куда идти на логин
 LOGIN_URL = '/users/login/'
+
+SHOW_VULNS = True

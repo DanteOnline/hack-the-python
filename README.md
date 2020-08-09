@@ -92,3 +92,10 @@ Go to main menu on [http://127.0.0.1:8000](http://127.0.0.1:8000)
 - tools:
     - cookie - server on flask to intercept coockies
     - csrfserver - server on flask to csrf attack
+
+# Settings
+
+in myblog/blog/settings.py
+SHOW_VULNS - variable (default True)
+True - show vulnerabilities names in main menu
+False - not show vulnerabilities names (project names only)
