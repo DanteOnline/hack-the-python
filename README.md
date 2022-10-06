@@ -36,22 +36,6 @@ $ python3 runall3.py
 
 Go to main menu on [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
-### from dockerhub
-
-#### Install
-
-```sh
-$ docker pull danteonline/hack-the-python
-```
-
-#### Run
-
-```sh
-$ docker run -ti -p 8000-8005:8000-8005 hack-the-python
-```
-
-Go to main menu on [http://127.0.0.1:8000](http://127.0.0.1:8000)
-
 ### from Dockerfile
 
 #### Install
@@ -96,6 +80,6 @@ Go to main menu on [http://127.0.0.1:8000](http://127.0.0.1:8000)
 # Settings
 
 in myblog/blog/settings.py
-SHOW_VULNS - variable (default True)
+SHOW_VULNS - variable (default False)
 True - show vulnerabilities names in main menu
 False - not show vulnerabilities names (project names only)
