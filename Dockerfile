@@ -1,4 +1,4 @@
-from python:3.8-slim
+from python
 RUN apt-get update && apt-get install -y git
 RUN git clone https://github.com/DanteOnline/hack-the-python.git
 WORKDIR ./hack-the-python
