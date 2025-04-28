@@ -33,7 +33,7 @@ Go to main menu on [http://127.0.0.1:8000](http://127.0.0.1:8000)
 ### from Docker image
 
 ```commandline
-docker run -ti -p 8000-8005:8000-8005 hack-the-python
+docker run -ti -p 8000-8005:8000-8005 danteonline/hack-the-python
 ```
 
 ### from Dockerfile
