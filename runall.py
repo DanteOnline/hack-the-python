@@ -8,6 +8,8 @@ def run_flask_process(process):
 
 
 def run_django_process(process):
+    print(f'MIGRATE {process}')
+    os.system(f'python {process} migrate')
     print(f'RUN {process}')
     os.system(f'python {process} runserver 0.0.0.0:8000')
 
@@ -20,6 +22,7 @@ def run_process(process):
         run_django_process(name)
 
 
+FLASK_MIGRATE = 'create_db.py'
 FLASK_RUN = 'main.py'
 DJANGO_RUN = 'manage.py'
 run_files = []

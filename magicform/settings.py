@@ -1,2 +1,2 @@
-DB_NAME = 'magicform.sqlite'
+DB_NAME = 'db.sqlite3'
 TABLE_NAME = 'comments'
