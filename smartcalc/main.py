@@ -9,7 +9,10 @@ def index():
         return render_template('index.html')
     else:
         text = request.form['formula']
-        result = eval(text)
+        try:
+            result = eval(text)
+        except (SyntaxError, NameError):
+            result = 'Error: wrong input'
         return render_template('index.html', result=result, text=text)
 
 
@@ -19,7 +22,10 @@ def index_protected():
         return render_template('index.html')
     else:
         text = request.form['formula']
-        result = eval(text, {'__builtins__': {}})
+        try:
+            result = eval(text)
+        except (SyntaxError, NameError):
+            result = 'Error: wrong input'
         return render_template('index.html', result=result, text=text)
 
 
