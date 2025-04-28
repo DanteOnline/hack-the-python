@@ -4,14 +4,14 @@ from multiprocessing import Pool
 
 def run_flask_process(process):
     print(f'RUN {process}')
-    os.system('python {}'.format(process))
+    os.system('python "{}"'.format(process))
 
 
 def run_django_process(process):
     print(f'MIGRATE {process}')
-    os.system(f'python {process} migrate')
+    os.system(f'python "{process}" migrate')
     print(f'RUN {process}')
-    os.system(f'python {process} runserver 0.0.0.0:8000')
+    os.system(f'python "{process}" runserver 0.0.0.0:8000')
 
 
 def run_process(process):
