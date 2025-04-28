@@ -23,7 +23,7 @@ def index_protected():
     else:
         text = request.form['formula']
         try:
-            result = eval(text)
+            result = eval(text, {'__builtins__': {}})
         except (SyntaxError, NameError):
             result = 'Error: wrong input'
         return render_template('index.html', result=result, text=text)
