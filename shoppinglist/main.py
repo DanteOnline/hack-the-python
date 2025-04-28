@@ -19,11 +19,7 @@ def index():
     result = []
     if username:
         statement = f"SELECT * FROM {TABLE_NAME} where username = '{username}'"
-        # statement = f"SELECT * FROM {TABLE_NAME} where username = ?"
-
         print(statement)
-        # SELECT * FROM buy where username = 'Leo ' or '1' = '1'
-        # cursor.execute(statement, (username,))
         cursor.execute(statement)
         result = cursor.fetchall()
     return render_template('index.html', buy=result)
