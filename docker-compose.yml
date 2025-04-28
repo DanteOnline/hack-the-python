@@ -1,0 +1,10 @@
+volumes:
+  static:
+
+services:
+  hack-the-python:
+    image: danteonline/hack-the-python
+    build:
+      context: .
+    ports:
+      - "8000-8005:8000-8005"

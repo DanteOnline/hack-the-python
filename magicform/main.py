@@ -2,6 +2,9 @@ from flask import Flask, render_template, request, redirect
 import sqlite3
 from settings import TABLE_NAME, DB_NAME
 import os
+from create_db import create_db
+
+create_db()
 
 app = Flask(__name__)
 dir_path = os.path.dirname(os.path.abspath(__file__))

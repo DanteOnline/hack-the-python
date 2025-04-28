@@ -12,7 +12,7 @@ You need 8000-8005 open ports
 
 #### Install
 
-You need python >= 3.6 and pip
+You need python >= 3.12 and pip
 
 ```sh
 $ git clone https://github.com/DanteOnline/hack-the-python.git
@@ -22,19 +22,19 @@ $ pip install -r requirements.txt
 
 #### Run
 
-If you use python command run runall.py
+In your virtual environment run
 
 ```sh
 $ python runall.py
 ```
 
-If you use python3 command run runall3.py
-
-```sh
-$ python3 runall3.py
-```
-
 Go to main menu on [http://127.0.0.1:8000](http://127.0.0.1:8000)
+
+### from Docker image
+
+```commandline
+docker run -ti -p 8000-8005:8000-8005 hack-the-python
+```
 
 ### from Dockerfile
 
@@ -43,13 +43,7 @@ Go to main menu on [http://127.0.0.1:8000](http://127.0.0.1:8000)
 ```sh
 $ git clone https://github.com/DanteOnline/hack-the-python.git
 $ cd hack-the-python
-$ docker build . -t hack-the-python
-```
-
-#### Run
-
-```sh
-$ docker run -ti -p 8000-8005:8000-8005 hack-the-python
+$ docker compose up --build
 ```
 
 Go to main menu on [http://127.0.0.1:8000](http://127.0.0.1:8000)
@@ -57,29 +51,24 @@ Go to main menu on [http://127.0.0.1:8000](http://127.0.0.1:8000)
 # List of vulnerabilities
 
 - web-client
-    - others
-        - magicform - site on flask with lock html from
-    - SQL injection
-        - shoppinglist - site on flask with sql injection
-    - xss
-        - myblog - site on django with xss (low, middle)
-    - csrf
-        - myblog - site on django with csrf
+
+  - [MagicForm](magicform/README.md)
+  - [shoppinglist](shoppinglist/README.md)
+  - [myblog](myblog/README.md)
+  - [myblog](myblog/README.md)
 
 - web-server
-    - eval injection
-        - smartcalc - site on flask with eval injection
+  - [smartcalc](smartcalc/README.md)
 
-- pickle-injection
-    - sockserver - console python tcp client and server
+- other
+    - [sockserver](sockserver/README.md)
 
 - tools:
-    - cookie - server on flask to intercept coockies
-    - csrfserver - server on flask to csrf attack
+    - [cookie, csrfserver](tools/REAMDE.md)
 
 # Settings
 
 in myblog/blog/settings.py
-SHOW_VULNS - variable (default False)
+`SHOW_VULNS` - variable (default False)
 True - show vulnerabilities names in main menu
 False - not show vulnerabilities names (project names only)

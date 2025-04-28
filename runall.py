@@ -22,7 +22,6 @@ def run_process(process):
         run_django_process(name)
 
 
-FLASK_MIGRATE = 'create_db.py'
 FLASK_RUN = 'main.py'
 DJANGO_RUN = 'manage.py'
 run_files = []
